@@ -16,6 +16,7 @@ define nginx::vhost(
 
 
 ){
+       $vhost_docroot = "${::nginx::docroot}/${name}"
 
            file {"${vhost_dir}/${priority}-${name}.conf":
                   ensure => file,
@@ -28,5 +29,13 @@ define nginx::vhost(
 
                }  
 
+      file { $vhost_docroot:
+
+          ensure => directory,
+          owner  => $owner,
+          mode   => '0755',
+          group  => $group,
+
+        }
 
 }
