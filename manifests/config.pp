@@ -8,7 +8,7 @@ class nginx::config(
    String $confd       = $::nginx::config_confd,
    String $log_dir     = $::nginx::config_log_dir,
    String $pid_file    = $::nginx::config_pid_file,
-   Optional[String] $vdir_enable = $::nginx::config+vdir_enable,
+   Optional[String] $vdir_enable = $::nginx::config_vdir_enable,
    String $process_user = $::nginx::config_process_user,
    String $docroot      = $::nginx::docroot,
 
