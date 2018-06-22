@@ -22,7 +22,7 @@ class nginx::config(
          mode   => $mode,
          owner  => $owner,
          group  => $group,
-         contents => template("${module_name}/conf.d/nginx.conf.erb"),
+         content => template("${module_name}/conf.d/nginx.conf.erb"),
 
 
      }

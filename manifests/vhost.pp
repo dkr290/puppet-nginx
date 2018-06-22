@@ -7,7 +7,7 @@ define nginx::vhost(
   String $owner                        = $::nginx::config_owner,
   String $group                        = $::nginx::config_group,
   String $mode                         = $::nginx::config_mode,
-  Options[String] $config_vdir_enable  = $::nginx::config_vdir_enable,
+  Optional[String] $config_vdir_enable  = $::nginx::config_vdir_enable,
   String $log_dir                      = $::nginx::config_log_dir,
   String $vhost_dir                    = $::nginx::vhost_dir,
   

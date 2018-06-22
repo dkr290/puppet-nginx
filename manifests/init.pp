@@ -1,6 +1,7 @@
 class nginx(
 
 
+$ensure,
 $package_name,
 $config_dir,
 $config_ensure,

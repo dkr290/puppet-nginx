@@ -1,7 +1,7 @@
 #File managed by puppet
 
 user <%= @process_user %>;
-worker_process 512;
+worker_processes 512;
 
 error_log <%= @log_dir  %>/error.log;
 pid       <%= @pid_file %>;
@@ -9,7 +9,7 @@ pid       <%= @pid_file %>;
 
 events {
 
-  worker_connections = 1024;
+  worker_connections 1024;
 
 }
 
